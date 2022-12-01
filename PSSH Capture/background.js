@@ -37,7 +37,7 @@ function requestToClipboard(tabId) {
 			
 			curl_license_data += "\n  --compressed";
 			
-			// Generating the curl license text link for https://t.me/drm_downloader_robot
+			// Generating the curl license text link
 			const license_gen_link = "https://drm-bot.herokuapp.com/gen.php";
 			var data = new FormData();
 			data.append('playlist', curl_license_data);
@@ -67,7 +67,7 @@ function requestToClipboard(tabId) {
 
 				chrome.browserAction.setBadgeBackgroundColor({color: "#FF0000", tabId: details.id});
 				chrome.browserAction.setBadgeText({text: "📋", tabId: details.id});
-				alert("The pssh and the generated link of widevine license curl data has been copied to your clipboard successfully!\n\nNow go to https://t.me/drm_downloader_robot and paste it and send it to the bot.");
+				alert("The pssh and the generated link of widevine license curl data has been copied to your clipboard successfully!\n\nNow paste it and send it.");
 
 			}
 			gen_link.send(data);
